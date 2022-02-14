@@ -22,4 +22,4 @@ PASR=full
 PSRAM_WIDTH=8
 REFRESH_RATE=normal
 SIMULATION=false
-Synthesis_tool=Synplify Pro
+Synthesis_tool=GowinSynthesis
