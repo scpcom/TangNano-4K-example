@@ -1,10 +1,10 @@
-//Copyright (C)2014-2021 Gowin Semiconductor Corporation.
+//Copyright (C)2014-2022 Gowin Semiconductor Corporation.
 //All rights reserved.
 //File Title: Template file for instantiation
-//GOWIN Version: GowinSynthesis V1.9.7.02Beta
+//GOWIN Version: GowinSynthesis V1.9.8.03
 //Part Number: GW1NSR-LV4CQN48PC7/I6
 //Device: GW1NSR-4C
-//Created Time: Tue Jun 01 10:14:01 2021
+//Created Time: Mon Feb 14 00:27:29 2022
 
 //Change the instance name and port connections to the signal names
 //--------Copy here to design--------

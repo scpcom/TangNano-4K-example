@@ -1,8 +1,8 @@
-//Copyright (C)2014-2021 Gowin Semiconductor Corporation.
+//Copyright (C)2014-2022 Gowin Semiconductor Corporation.
 //All rights reserved.
 //File Title: Post-PnR Simulation Model file
-//GOWIN Version: V1.9.7.02Beta
-//Created Time: Tue Jun 01 10:14:02 2021
+//GOWIN Version: V1.9.8.03
+//Created Time: Mon Feb 14 00:27:29 2022
 
 module DVI_TX_Top(
 	I_rst_n,
@@ -134,7 +134,7 @@ wire \rgb2dvi_inst/TMDS8b10b_inst_r/n134_3 ;
 wire \rgb2dvi_inst/TMDS8b10b_inst_r/n133_2 ;
 wire \rgb2dvi_inst/TMDS8b10b_inst_r/n133_3 ;
 wire \rgb2dvi_inst/TMDS8b10b_inst_r/n132_2 ;
-wire \rgb2dvi_inst/TMDS8b10b_inst_r/n132_3 ;
+wire \rgb2dvi_inst/TMDS8b10b_inst_r/n132_0_COUT ;
 wire \rgb2dvi_inst/TMDS8b10b_inst_r/n536_2 ;
 wire \rgb2dvi_inst/TMDS8b10b_inst_r/n536_3 ;
 wire \rgb2dvi_inst/TMDS8b10b_inst_r/n535_2 ;
@@ -142,7 +142,7 @@ wire \rgb2dvi_inst/TMDS8b10b_inst_r/n535_3 ;
 wire \rgb2dvi_inst/TMDS8b10b_inst_r/n534_2 ;
 wire \rgb2dvi_inst/TMDS8b10b_inst_r/n534_3 ;
 wire \rgb2dvi_inst/TMDS8b10b_inst_r/n533_2 ;
-wire \rgb2dvi_inst/TMDS8b10b_inst_r/n533_3 ;
+wire \rgb2dvi_inst/TMDS8b10b_inst_r/n533_0_COUT ;
 wire \rgb2dvi_inst/TMDS8b10b_inst_r/n536_6 ;
 wire \rgb2dvi_inst/TMDS8b10b_inst_r/n536_7 ;
 wire \rgb2dvi_inst/TMDS8b10b_inst_r/n535_6 ;
@@ -154,7 +154,7 @@ wire \rgb2dvi_inst/TMDS8b10b_inst_r/n366_4 ;
 wire \rgb2dvi_inst/TMDS8b10b_inst_r/n365_3 ;
 wire \rgb2dvi_inst/TMDS8b10b_inst_r/n365_4 ;
 wire \rgb2dvi_inst/TMDS8b10b_inst_r/n364_3 ;
-wire \rgb2dvi_inst/TMDS8b10b_inst_r/n364_4 ;
+wire \rgb2dvi_inst/TMDS8b10b_inst_r/n364_0_COUT ;
 wire \rgb2dvi_inst/TMDS8b10b_inst_r/n239_15 ;
 wire \rgb2dvi_inst/TMDS8b10b_inst_r/n239_14 ;
 wire \rgb2dvi_inst/TMDS8b10b_inst_r/n238_13 ;
@@ -162,7 +162,7 @@ wire \rgb2dvi_inst/TMDS8b10b_inst_r/n238_12 ;
 wire \rgb2dvi_inst/TMDS8b10b_inst_r/n237_13 ;
 wire \rgb2dvi_inst/TMDS8b10b_inst_r/n237_12 ;
 wire \rgb2dvi_inst/TMDS8b10b_inst_r/n236_11 ;
-wire \rgb2dvi_inst/TMDS8b10b_inst_r/n236_10 ;
+wire \rgb2dvi_inst/TMDS8b10b_inst_r/n236_5_COUT ;
 wire \rgb2dvi_inst/TMDS8b10b_inst_r/n367_13 ;
 wire \rgb2dvi_inst/TMDS8b10b_inst_r/n367_12 ;
 wire \rgb2dvi_inst/TMDS8b10b_inst_r/n367_16 ;
@@ -254,7 +254,7 @@ wire \rgb2dvi_inst/TMDS8b10b_inst_g/n134_3 ;
 wire \rgb2dvi_inst/TMDS8b10b_inst_g/n133_2 ;
 wire \rgb2dvi_inst/TMDS8b10b_inst_g/n133_3 ;
 wire \rgb2dvi_inst/TMDS8b10b_inst_g/n132_2 ;
-wire \rgb2dvi_inst/TMDS8b10b_inst_g/n132_3 ;
+wire \rgb2dvi_inst/TMDS8b10b_inst_g/n132_0_COUT ;
 wire \rgb2dvi_inst/TMDS8b10b_inst_g/n536_2 ;
 wire \rgb2dvi_inst/TMDS8b10b_inst_g/n536_3 ;
 wire \rgb2dvi_inst/TMDS8b10b_inst_g/n535_2 ;
@@ -262,7 +262,7 @@ wire \rgb2dvi_inst/TMDS8b10b_inst_g/n535_3 ;
 wire \rgb2dvi_inst/TMDS8b10b_inst_g/n534_2 ;
 wire \rgb2dvi_inst/TMDS8b10b_inst_g/n534_3 ;
 wire \rgb2dvi_inst/TMDS8b10b_inst_g/n533_2 ;
-wire \rgb2dvi_inst/TMDS8b10b_inst_g/n533_3 ;
+wire \rgb2dvi_inst/TMDS8b10b_inst_g/n533_0_COUT ;
 wire \rgb2dvi_inst/TMDS8b10b_inst_g/n536_6 ;
 wire \rgb2dvi_inst/TMDS8b10b_inst_g/n536_7 ;
 wire \rgb2dvi_inst/TMDS8b10b_inst_g/n535_6 ;
@@ -274,7 +274,7 @@ wire \rgb2dvi_inst/TMDS8b10b_inst_g/n366_4 ;
 wire \rgb2dvi_inst/TMDS8b10b_inst_g/n365_3 ;
 wire \rgb2dvi_inst/TMDS8b10b_inst_g/n365_4 ;
 wire \rgb2dvi_inst/TMDS8b10b_inst_g/n364_3 ;
-wire \rgb2dvi_inst/TMDS8b10b_inst_g/n364_4 ;
+wire \rgb2dvi_inst/TMDS8b10b_inst_g/n364_0_COUT ;
 wire \rgb2dvi_inst/TMDS8b10b_inst_g/n239_15 ;
 wire \rgb2dvi_inst/TMDS8b10b_inst_g/n239_14 ;
 wire \rgb2dvi_inst/TMDS8b10b_inst_g/n238_13 ;
@@ -282,7 +282,7 @@ wire \rgb2dvi_inst/TMDS8b10b_inst_g/n238_12 ;
 wire \rgb2dvi_inst/TMDS8b10b_inst_g/n237_13 ;
 wire \rgb2dvi_inst/TMDS8b10b_inst_g/n237_12 ;
 wire \rgb2dvi_inst/TMDS8b10b_inst_g/n236_11 ;
-wire \rgb2dvi_inst/TMDS8b10b_inst_g/n236_10 ;
+wire \rgb2dvi_inst/TMDS8b10b_inst_g/n236_5_COUT ;
 wire \rgb2dvi_inst/TMDS8b10b_inst_g/n367_13 ;
 wire \rgb2dvi_inst/TMDS8b10b_inst_g/n367_12 ;
 wire \rgb2dvi_inst/TMDS8b10b_inst_g/n367_16 ;
@@ -292,7 +292,7 @@ wire \rgb2dvi_inst/TMDS8b10b_inst_g/n366_11 ;
 wire \rgb2dvi_inst/TMDS8b10b_inst_g/n365_12 ;
 wire \rgb2dvi_inst/TMDS8b10b_inst_g/n365_11 ;
 wire \rgb2dvi_inst/TMDS8b10b_inst_g/n364_12 ;
-wire \rgb2dvi_inst/TMDS8b10b_inst_g/n364_11 ;
+wire \rgb2dvi_inst/TMDS8b10b_inst_g/n364_4_COUT ;
 wire \rgb2dvi_inst/TMDS8b10b_inst_g/n654_3 ;
 wire \rgb2dvi_inst/TMDS8b10b_inst_g/n403_9 ;
 wire [3:1] \rgb2dvi_inst/TMDS8b10b_inst_g/cnt_one_9bit ;
@@ -373,7 +373,7 @@ wire \rgb2dvi_inst/TMDS8b10b_inst_b/n134_3 ;
 wire \rgb2dvi_inst/TMDS8b10b_inst_b/n133_2 ;
 wire \rgb2dvi_inst/TMDS8b10b_inst_b/n133_3 ;
 wire \rgb2dvi_inst/TMDS8b10b_inst_b/n132_2 ;
-wire \rgb2dvi_inst/TMDS8b10b_inst_b/n132_3 ;
+wire \rgb2dvi_inst/TMDS8b10b_inst_b/n132_0_COUT ;
 wire \rgb2dvi_inst/TMDS8b10b_inst_b/n536_2 ;
 wire \rgb2dvi_inst/TMDS8b10b_inst_b/n536_3 ;
 wire \rgb2dvi_inst/TMDS8b10b_inst_b/n535_2 ;
@@ -381,7 +381,7 @@ wire \rgb2dvi_inst/TMDS8b10b_inst_b/n535_3 ;
 wire \rgb2dvi_inst/TMDS8b10b_inst_b/n534_2 ;
 wire \rgb2dvi_inst/TMDS8b10b_inst_b/n534_3 ;
 wire \rgb2dvi_inst/TMDS8b10b_inst_b/n533_2 ;
-wire \rgb2dvi_inst/TMDS8b10b_inst_b/n533_3 ;
+wire \rgb2dvi_inst/TMDS8b10b_inst_b/n533_0_COUT ;
 wire \rgb2dvi_inst/TMDS8b10b_inst_b/n536_6 ;
 wire \rgb2dvi_inst/TMDS8b10b_inst_b/n536_7 ;
 wire \rgb2dvi_inst/TMDS8b10b_inst_b/n535_6 ;
@@ -389,13 +389,13 @@ wire \rgb2dvi_inst/TMDS8b10b_inst_b/n535_7 ;
 wire \rgb2dvi_inst/TMDS8b10b_inst_b/n534_6 ;
 wire \rgb2dvi_inst/TMDS8b10b_inst_b/n534_7 ;
 wire \rgb2dvi_inst/TMDS8b10b_inst_b/n533_6 ;
-wire \rgb2dvi_inst/TMDS8b10b_inst_b/n533_7 ;
+wire \rgb2dvi_inst/TMDS8b10b_inst_b/n533_2_COUT ;
 wire \rgb2dvi_inst/TMDS8b10b_inst_b/n366_3 ;
 wire \rgb2dvi_inst/TMDS8b10b_inst_b/n366_4 ;
 wire \rgb2dvi_inst/TMDS8b10b_inst_b/n365_3 ;
 wire \rgb2dvi_inst/TMDS8b10b_inst_b/n365_4 ;
 wire \rgb2dvi_inst/TMDS8b10b_inst_b/n364_3 ;
-wire \rgb2dvi_inst/TMDS8b10b_inst_b/n364_4 ;
+wire \rgb2dvi_inst/TMDS8b10b_inst_b/n364_0_COUT ;
 wire \rgb2dvi_inst/TMDS8b10b_inst_b/n239_15 ;
 wire \rgb2dvi_inst/TMDS8b10b_inst_b/n239_14 ;
 wire \rgb2dvi_inst/TMDS8b10b_inst_b/n238_13 ;
@@ -403,7 +403,7 @@ wire \rgb2dvi_inst/TMDS8b10b_inst_b/n238_12 ;
 wire \rgb2dvi_inst/TMDS8b10b_inst_b/n237_13 ;
 wire \rgb2dvi_inst/TMDS8b10b_inst_b/n237_12 ;
 wire \rgb2dvi_inst/TMDS8b10b_inst_b/n236_11 ;
-wire \rgb2dvi_inst/TMDS8b10b_inst_b/n236_10 ;
+wire \rgb2dvi_inst/TMDS8b10b_inst_b/n236_5_COUT ;
 wire \rgb2dvi_inst/TMDS8b10b_inst_b/n367_13 ;
 wire \rgb2dvi_inst/TMDS8b10b_inst_b/n367_12 ;
 wire \rgb2dvi_inst/TMDS8b10b_inst_b/n367_16 ;
@@ -1273,7 +1273,7 @@ ALU \rgb2dvi_inst/TMDS8b10b_inst_r/n132_s  (
 	.I1(\rgb2dvi_inst/TMDS8b10b_inst_r/cnt_one_9bit [3]),
 	.I3(GND),
 	.CIN(\rgb2dvi_inst/TMDS8b10b_inst_r/n133_3 ),
-	.COUT(\rgb2dvi_inst/TMDS8b10b_inst_r/n132_3 ),
+	.COUT(\rgb2dvi_inst/TMDS8b10b_inst_r/n132_0_COUT ),
 	.SUM(\rgb2dvi_inst/TMDS8b10b_inst_r/n132_2 )
 );
 defparam \rgb2dvi_inst/TMDS8b10b_inst_r/n132_s .ALU_MODE=0;
@@ -1309,7 +1309,7 @@ ALU \rgb2dvi_inst/TMDS8b10b_inst_r/n533_s  (
 	.I1(\rgb2dvi_inst/TMDS8b10b_inst_r/n400_5 ),
 	.I3(GND),
 	.CIN(\rgb2dvi_inst/TMDS8b10b_inst_r/n534_3 ),
-	.COUT(\rgb2dvi_inst/TMDS8b10b_inst_r/n533_3 ),
+	.COUT(\rgb2dvi_inst/TMDS8b10b_inst_r/n533_0_COUT ),
 	.SUM(\rgb2dvi_inst/TMDS8b10b_inst_r/n533_2 )
 );
 defparam \rgb2dvi_inst/TMDS8b10b_inst_r/n533_s .ALU_MODE=0;
@@ -1363,7 +1363,7 @@ ALU \rgb2dvi_inst/TMDS8b10b_inst_r/n364_s  (
 	.I1(\rgb2dvi_inst/TMDS8b10b_inst_r/cnt [4]),
 	.I3(GND),
 	.CIN(\rgb2dvi_inst/TMDS8b10b_inst_r/n365_4 ),
-	.COUT(\rgb2dvi_inst/TMDS8b10b_inst_r/n364_4 ),
+	.COUT(\rgb2dvi_inst/TMDS8b10b_inst_r/n364_0_COUT ),
 	.SUM(\rgb2dvi_inst/TMDS8b10b_inst_r/n364_3 )
 );
 defparam \rgb2dvi_inst/TMDS8b10b_inst_r/n364_s .ALU_MODE=0;
@@ -1399,7 +1399,7 @@ ALU \rgb2dvi_inst/TMDS8b10b_inst_r/n236_s4  (
 	.I1(\rgb2dvi_inst/TMDS8b10b_inst_r/cnt_one_9bit [3]),
 	.I3(GND),
 	.CIN(\rgb2dvi_inst/TMDS8b10b_inst_r/n237_12 ),
-	.COUT(\rgb2dvi_inst/TMDS8b10b_inst_r/n236_10 ),
+	.COUT(\rgb2dvi_inst/TMDS8b10b_inst_r/n236_5_COUT ),
 	.SUM(\rgb2dvi_inst/TMDS8b10b_inst_r/n236_11 )
 );
 defparam \rgb2dvi_inst/TMDS8b10b_inst_r/n236_s4 .ALU_MODE=1;
@@ -2183,7 +2183,7 @@ ALU \rgb2dvi_inst/TMDS8b10b_inst_g/n132_s  (
 	.I1(\rgb2dvi_inst/TMDS8b10b_inst_g/cnt_one_9bit [3]),
 	.I3(GND),
 	.CIN(\rgb2dvi_inst/TMDS8b10b_inst_g/n133_3 ),
-	.COUT(\rgb2dvi_inst/TMDS8b10b_inst_g/n132_3 ),
+	.COUT(\rgb2dvi_inst/TMDS8b10b_inst_g/n132_0_COUT ),
 	.SUM(\rgb2dvi_inst/TMDS8b10b_inst_g/n132_2 )
 );
 defparam \rgb2dvi_inst/TMDS8b10b_inst_g/n132_s .ALU_MODE=0;
@@ -2219,7 +2219,7 @@ ALU \rgb2dvi_inst/TMDS8b10b_inst_g/n533_s  (
 	.I1(\rgb2dvi_inst/TMDS8b10b_inst_g/n400_5 ),
 	.I3(GND),
 	.CIN(\rgb2dvi_inst/TMDS8b10b_inst_g/n534_3 ),
-	.COUT(\rgb2dvi_inst/TMDS8b10b_inst_g/n533_3 ),
+	.COUT(\rgb2dvi_inst/TMDS8b10b_inst_g/n533_0_COUT ),
 	.SUM(\rgb2dvi_inst/TMDS8b10b_inst_g/n533_2 )
 );
 defparam \rgb2dvi_inst/TMDS8b10b_inst_g/n533_s .ALU_MODE=0;
@@ -2273,7 +2273,7 @@ ALU \rgb2dvi_inst/TMDS8b10b_inst_g/n364_s  (
 	.I1(\rgb2dvi_inst/TMDS8b10b_inst_g/cnt [4]),
 	.I3(GND),
 	.CIN(\rgb2dvi_inst/TMDS8b10b_inst_g/n365_4 ),
-	.COUT(\rgb2dvi_inst/TMDS8b10b_inst_g/n364_4 ),
+	.COUT(\rgb2dvi_inst/TMDS8b10b_inst_g/n364_0_COUT ),
 	.SUM(\rgb2dvi_inst/TMDS8b10b_inst_g/n364_3 )
 );
 defparam \rgb2dvi_inst/TMDS8b10b_inst_g/n364_s .ALU_MODE=0;
@@ -2309,7 +2309,7 @@ ALU \rgb2dvi_inst/TMDS8b10b_inst_g/n236_s4  (
 	.I1(\rgb2dvi_inst/TMDS8b10b_inst_g/cnt_one_9bit [3]),
 	.I3(GND),
 	.CIN(\rgb2dvi_inst/TMDS8b10b_inst_g/n237_12 ),
-	.COUT(\rgb2dvi_inst/TMDS8b10b_inst_g/n236_10 ),
+	.COUT(\rgb2dvi_inst/TMDS8b10b_inst_g/n236_5_COUT ),
 	.SUM(\rgb2dvi_inst/TMDS8b10b_inst_g/n236_11 )
 );
 defparam \rgb2dvi_inst/TMDS8b10b_inst_g/n236_s4 .ALU_MODE=1;
@@ -2354,7 +2354,7 @@ ALU \rgb2dvi_inst/TMDS8b10b_inst_g/n364_s3  (
 	.I1(\rgb2dvi_inst/TMDS8b10b_inst_g/cnt_one_9bit [3]),
 	.I3(GND),
 	.CIN(\rgb2dvi_inst/TMDS8b10b_inst_g/n365_11 ),
-	.COUT(\rgb2dvi_inst/TMDS8b10b_inst_g/n364_11 ),
+	.COUT(\rgb2dvi_inst/TMDS8b10b_inst_g/n364_4_COUT ),
 	.SUM(\rgb2dvi_inst/TMDS8b10b_inst_g/n364_12 )
 );
 defparam \rgb2dvi_inst/TMDS8b10b_inst_g/n364_s3 .ALU_MODE=1;
@@ -3086,7 +3086,7 @@ ALU \rgb2dvi_inst/TMDS8b10b_inst_b/n132_s  (
 	.I1(\rgb2dvi_inst/TMDS8b10b_inst_b/cnt_one_9bit [3]),
 	.I3(GND),
 	.CIN(\rgb2dvi_inst/TMDS8b10b_inst_b/n133_3 ),
-	.COUT(\rgb2dvi_inst/TMDS8b10b_inst_b/n132_3 ),
+	.COUT(\rgb2dvi_inst/TMDS8b10b_inst_b/n132_0_COUT ),
 	.SUM(\rgb2dvi_inst/TMDS8b10b_inst_b/n132_2 )
 );
 defparam \rgb2dvi_inst/TMDS8b10b_inst_b/n132_s .ALU_MODE=0;
@@ -3122,7 +3122,7 @@ ALU \rgb2dvi_inst/TMDS8b10b_inst_b/n533_s  (
 	.I1(\rgb2dvi_inst/TMDS8b10b_inst_b/n400_5 ),
 	.I3(GND),
 	.CIN(\rgb2dvi_inst/TMDS8b10b_inst_b/n534_3 ),
-	.COUT(\rgb2dvi_inst/TMDS8b10b_inst_b/n533_3 ),
+	.COUT(\rgb2dvi_inst/TMDS8b10b_inst_b/n533_0_COUT ),
 	.SUM(\rgb2dvi_inst/TMDS8b10b_inst_b/n533_2 )
 );
 defparam \rgb2dvi_inst/TMDS8b10b_inst_b/n533_s .ALU_MODE=0;
@@ -3158,7 +3158,7 @@ ALU \rgb2dvi_inst/TMDS8b10b_inst_b/n533_s1  (
 	.I1(\rgb2dvi_inst/TMDS8b10b_inst_b/cnt_one_9bit [3]),
 	.I3(GND),
 	.CIN(\rgb2dvi_inst/TMDS8b10b_inst_b/n534_7 ),
-	.COUT(\rgb2dvi_inst/TMDS8b10b_inst_b/n533_7 ),
+	.COUT(\rgb2dvi_inst/TMDS8b10b_inst_b/n533_2_COUT ),
 	.SUM(\rgb2dvi_inst/TMDS8b10b_inst_b/n533_6 )
 );
 defparam \rgb2dvi_inst/TMDS8b10b_inst_b/n533_s1 .ALU_MODE=0;
@@ -3185,7 +3185,7 @@ ALU \rgb2dvi_inst/TMDS8b10b_inst_b/n364_s  (
 	.I1(\rgb2dvi_inst/TMDS8b10b_inst_b/cnt [4]),
 	.I3(GND),
 	.CIN(\rgb2dvi_inst/TMDS8b10b_inst_b/n365_4 ),
-	.COUT(\rgb2dvi_inst/TMDS8b10b_inst_b/n364_4 ),
+	.COUT(\rgb2dvi_inst/TMDS8b10b_inst_b/n364_0_COUT ),
 	.SUM(\rgb2dvi_inst/TMDS8b10b_inst_b/n364_3 )
 );
 defparam \rgb2dvi_inst/TMDS8b10b_inst_b/n364_s .ALU_MODE=0;
@@ -3221,7 +3221,7 @@ ALU \rgb2dvi_inst/TMDS8b10b_inst_b/n236_s4  (
 	.I1(\rgb2dvi_inst/TMDS8b10b_inst_b/cnt_one_9bit [3]),
 	.I3(GND),
 	.CIN(\rgb2dvi_inst/TMDS8b10b_inst_b/n237_12 ),
-	.COUT(\rgb2dvi_inst/TMDS8b10b_inst_b/n236_10 ),
+	.COUT(\rgb2dvi_inst/TMDS8b10b_inst_b/n236_5_COUT ),
 	.SUM(\rgb2dvi_inst/TMDS8b10b_inst_b/n236_11 )
 );
 defparam \rgb2dvi_inst/TMDS8b10b_inst_b/n236_s4 .ALU_MODE=1;
