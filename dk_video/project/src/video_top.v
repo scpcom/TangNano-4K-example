@@ -147,11 +147,11 @@ testpattern testpattern_inst
     .I_h_total   (16'd1650           ),//hor total time  // 16'd1056  // 16'd1344  // 16'd1650  
     .I_h_sync    (16'd40             ),//hor sync time   // 16'd128   // 16'd136   // 16'd40    
     .I_h_bporch  (16'd220            ),//hor back porch  // 16'd88    // 16'd160   // 16'd220   
-    .I_h_res     (16'd640            ),//hor resolution  // 16'd800   // 16'd1024  // 16'd1280  
+    .I_h_res     (16'd800            ),//hor resolution  // 16'd800   // 16'd1024  // 16'd1280  
     .I_v_total   (16'd750            ),//ver total time  // 16'd628   // 16'd806   // 16'd750    
     .I_v_sync    (16'd5              ),//ver sync time   // 16'd4     // 16'd6     // 16'd5     
     .I_v_bporch  (16'd20             ),//ver back porch  // 16'd23    // 16'd29    // 16'd20    
-    .I_v_res     (16'd480            ),//ver resolution  // 16'd600   // 16'd768   // 16'd720    
+    .I_v_res     (16'd600            ),//ver resolution  // 16'd600   // 16'd768   // 16'd720    
     .I_hs_pol    (1'b1               ),//HS polarity , 0:negetive ploarity，1：positive polarity
     .I_vs_pol    (1'b1               ),//VS polarity , 0:negetive ploarity，1：positive polarity
     .O_de        (tp0_de_in          ),   
@@ -305,8 +305,8 @@ syn_gen syn_gen_inst
     .I_v_sync    (16'd5           ),// 16'd4     // 16'd6     // 16'd5        
     .I_v_bporch  (16'd20          ),// 16'd23    // 16'd29    // 16'd20        
     .I_v_res     (16'd720         ),// 16'd600   // 16'd768   // 16'd720      
-    .I_rd_hres   (16'd640         ),
-    .I_rd_vres   (16'd480         ),
+    .I_rd_hres   (16'd800         ),
+    .I_rd_vres   (16'd600         ),
     .I_hs_pol    (1'b1            ),//HS polarity , 0:负极性，1：正极性
     .I_vs_pol    (1'b1            ),//VS polarity , 0:负极性，1：正极性
     .O_rden      (syn_off0_re     ),
