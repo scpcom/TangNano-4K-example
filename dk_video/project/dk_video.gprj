@@ -3,7 +3,7 @@
 <Project>
     <Template>FPGA</Template>
     <Version>5</Version>
-    <Device>gw1nsr4c-000</Device>
+    <Device name="GW1NSR-4C" pn="GW1NSR-LV4CQN48PC7/I6">gw1nsr4c-009</Device>
     <FileList>
         <File path="src/dvi_tx/dvi_tx.v" type="file.verilog" enable="1"/>
         <File path="src/gowin_pllvr/GW_PLLVR.v" type="file.verilog" enable="1"/>
