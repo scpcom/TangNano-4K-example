@@ -1,9 +1,9 @@
-//Copyright (C)2014-2020 Gowin Semiconductor Corporation.
+//Copyright (C)2014-2022 Gowin Semiconductor Corporation.
 //All rights reserved.
 //File Title: IP file
-//GOWIN Version: V1.9.6.01Beta
+//GOWIN Version: V1.9.8.03
 //Part Number: GW1NSR-LV4CQN48PC7/I6
-//Created Time: Mon Aug 17 16:09:45 2020
+//Created Time: Tue Feb 15 01:33:38 2022
 
 module GW_PLLVR (clkout, lock, clkin);
 
