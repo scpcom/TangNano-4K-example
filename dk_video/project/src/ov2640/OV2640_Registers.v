@@ -33,7 +33,7 @@ module OV2640_Registers (
             address <= {8{1'b0}};
         end
         else if(advance == 1) begin     // Get the next value
-            address <= address+1;
+            address <= address+1'b1;
         end
            
         case (address) 
@@ -279,7 +279,7 @@ module OV2640_Registers (
             address <= {8{1'b0}};
         end
         else if(advance == 1) begin     // Get the next value
-            address <= address+1;
+            address <= address+1'b1;
         end
            
         case (address) 

@@ -78,7 +78,7 @@ module I2C_Interface #(parameter SID = 8'h42) (
                     taken_temp <= 1'b1;
                 end
                 else begin
-                    divider <= divider + 1;
+                    divider <= divider + 1'b1;
                 end
             end
             
@@ -163,7 +163,7 @@ module I2C_Interface #(parameter SID = 8'h42) (
                 divider <= {8{1'b0}};                   // Reset counter for clock divider
             end
             else begin
-                divider <= divider + 1;
+                divider <= divider + 1'b1;
             end
         
         end
