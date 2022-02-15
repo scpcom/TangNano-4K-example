@@ -144,14 +144,14 @@ testpattern testpattern_inst
     .I_single_r  (8'd0               ),
     .I_single_g  (8'd255             ),
     .I_single_b  (8'd0               ),                  //800x600    //1024x768   //1280x720    
-    .I_h_total   (16'd1650           ),//hor total time  // 16'd1056  // 16'd1344  // 16'd1650  
-    .I_h_sync    (16'd40             ),//hor sync time   // 16'd128   // 16'd136   // 16'd40    
-    .I_h_bporch  (16'd220            ),//hor back porch  // 16'd88    // 16'd160   // 16'd220   
-    .I_h_res     (16'd800            ),//hor resolution  // 16'd800   // 16'd1024  // 16'd1280  
-    .I_v_total   (16'd750            ),//ver total time  // 16'd628   // 16'd806   // 16'd750    
-    .I_v_sync    (16'd5              ),//ver sync time   // 16'd4     // 16'd6     // 16'd5     
-    .I_v_bporch  (16'd20             ),//ver back porch  // 16'd23    // 16'd29    // 16'd20    
-    .I_v_res     (16'd600            ),//ver resolution  // 16'd600   // 16'd768   // 16'd720    
+    .I_h_total   (12'd1650           ),//hor total time  // 16'd1056  // 16'd1344  // 16'd1650  
+    .I_h_sync    (12'd40             ),//hor sync time   // 16'd128   // 16'd136   // 16'd40    
+    .I_h_bporch  (12'd220            ),//hor back porch  // 16'd88    // 16'd160   // 16'd220   
+    .I_h_res     (12'd800            ),//hor resolution  // 16'd800   // 16'd1024  // 16'd1280  
+    .I_v_total   (12'd750            ),//ver total time  // 16'd628   // 16'd806   // 16'd750    
+    .I_v_sync    (12'd5              ),//ver sync time   // 16'd4     // 16'd6     // 16'd5     
+    .I_v_bporch  (12'd20             ),//ver back porch  // 16'd23    // 16'd29    // 16'd20    
+    .I_v_res     (12'd600            ),//ver resolution  // 16'd600   // 16'd768   // 16'd720    
     .I_hs_pol    (1'b1               ),//HS polarity , 0:negetive ploarity，1：positive polarity
     .I_vs_pol    (1'b1               ),//VS polarity , 0:negetive ploarity，1：positive polarity
     .O_de        (tp0_de_in          ),   
@@ -174,7 +174,7 @@ begin
     else if(cnt_vs==10'h3ff)
         cnt_vs<=cnt_vs;
     else if(vs_r && !tp0_vs_in) //vs24 falling edge
-        cnt_vs<=cnt_vs+1;
+        cnt_vs<=cnt_vs+1'b1;
     else
         cnt_vs<=cnt_vs;
 end 
