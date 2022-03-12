@@ -61,8 +61,10 @@ reg  [9:0]  cnt_vs;
 
 //--------------------------
 reg  [9:0]  pixdata_d1;
+reg  [9:0]  pixdata_d2;
 reg         hcnt;
 wire [15:0] cam_data;
+wire        cam_de_in;
 
 //-------------------------
 //frame buffer in
@@ -183,11 +185,13 @@ begin
 end 
 
 //==============================================================================
+localparam cam_mode = 8'h08; // 08:RGB565  04:RAW10
+
 OV2640_Controller u_OV2640_Controller
 (
     .clk             (clk_12M),         // 24Mhz clock signal
     .resend          (1'b0),            // Reset signal
-    .mode            (8'h04),           // 08:RGB565  04:RAW10
+    .mode            (cam_mode),        // 08:RGB565  04:RAW10
     .config_finished (), // Flag to indicate that the configuration is finished
     .sioc            (SCL),             // SCCB interface - clock signal
     .siod            (SDA),             // SCCB interface - data signal
@@ -198,17 +202,19 @@ OV2640_Controller u_OV2640_Controller
 always @(posedge PIXCLK or negedge I_rst_n) //I_clk
 begin
     if(!I_rst_n)
+    begin
         pixdata_d1 <= 10'd0;
-    else
-        pixdata_d1 <= PIXDATA;
-end
-
-always @(posedge PIXCLK or negedge I_rst_n) //I_clk
-begin
-    if(!I_rst_n)
+        pixdata_d2 <= 10'd0;
         hcnt <= 1'd0;
+    end
     else if(HREF)
+    begin
+        if (!hcnt)
+            pixdata_d1 <= PIXDATA;
+        else
+            pixdata_d2 <= PIXDATA;
         hcnt <= ~hcnt;
+    end
     else
         hcnt <= 1'd0;
 end
@@ -216,13 +222,22 @@ end
 // assign cam_data = {pixdata_d1[9:5],pixdata_d1[4:2],PIXDATA[9:7],PIXDATA[6:2]}; //RGB565
 // assign cam_data = {PIXDATA[9:5],PIXDATA[4:2],pixdata_d1[9:7],pixdata_d1[6:2]}; //RGB565
 
-assign cam_data = {PIXDATA[9:5],PIXDATA[9:4],PIXDATA[9:5]}; //RAW10
+if(cam_mode==8'h08)
+begin
+  assign cam_data = {pixdata_d1[9:5],pixdata_d1[4:2],pixdata_d2[9:7],pixdata_d2[6:2]}; //RGB565
+  assign cam_de_in = hcnt;
+end
+else
+begin
+  assign cam_data = {PIXDATA[9:5],PIXDATA[9:4],PIXDATA[9:5]}; //RAW10
+  assign cam_de_in = HREF;
+end
 
 //==============================================
 //data width 16bit   
     assign ch0_vfb_clk_in  = (cnt_vs <= 10'h1ff) ? tp0_pix_clk : PIXCLK;
     assign ch0_vfb_vs_in   = (cnt_vs <= 10'h1ff) ? ~tp0_vs_in : VSYNC;  //negative
-    assign ch0_vfb_de_in   = (cnt_vs <= 10'h1ff) ? tp0_de_in : HREF;//hcnt;  
+    assign ch0_vfb_de_in   = (cnt_vs <= 10'h1ff) ? tp0_de_in : cam_de_in; //HREF or hcnt
     assign ch0_vfb_data_in = (cnt_vs <= 10'h1ff) ? {tp0_data_r[7:3],tp0_data_g[7:2],tp0_data_b[7:3]} : cam_data; // RGB565
   
     // assign ch0_vfb_clk_in  = PIXCLK;       
