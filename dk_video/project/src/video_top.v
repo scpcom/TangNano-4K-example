@@ -187,6 +187,7 @@ OV2640_Controller u_OV2640_Controller
 (
     .clk             (clk_12M),         // 24Mhz clock signal
     .resend          (1'b0),            // Reset signal
+    .mode            (8'h04),           // 08:RGB565  04:RAW10
     .config_finished (), // Flag to indicate that the configuration is finished
     .sioc            (SCL),             // SCCB interface - clock signal
     .siod            (SDA),             // SCCB interface - data signal

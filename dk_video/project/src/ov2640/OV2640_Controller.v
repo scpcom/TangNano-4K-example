@@ -1,6 +1,7 @@
 module OV2640_Controller (
     input clk,                              // 50Mhz clock signal
     input resend,                           // Reset signal
+    input [7:0] mode,                       // 08:RGB565  04:RAW10
     output config_finished,                 // Flag to indicate that the configuration is finished
     output sioc,                            // SCCB interface - clock signal
     inout siod,                             // SCCB interface - data signal
@@ -30,6 +31,7 @@ module OV2640_Controller (
     OV2640_Registers LUT(
         .clk(clk),                          // 50Mhz clock signal
         .advance(taken),                    // Flag to advance to next register
+        .mode(mode),
         .command(command),                  // register value and data for OV2640
         .finished(finished),                // Flag to indicate the configuration is finshed
         .resend(resend)                     // Re-configure flag for OV2640

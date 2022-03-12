@@ -2,6 +2,7 @@ module OV2640_Registers (
     input clk, 
     input resend, 
     input advance, 
+    input [7:0] mode,
     output [15:0] command, 
     output finished
 );
@@ -215,7 +216,7 @@ module OV2640_Registers (
           175 : sreg <= 16'hFF_01;
           176 : sreg <= 16'hFF_00;
           177 : sreg <= 16'hE0_04;
-          178 : sreg <= 16'hDA_04;//08:RGB565  04:RAW10
+          178 : sreg <= {8'hDA, mode};//08:RGB565  04:RAW10
           179 : sreg <= 16'hD7_03;
           180 : sreg <= 16'hE1_77;
           181 : sreg <= 16'hE0_00;
@@ -264,7 +265,7 @@ module OV2640_Registers (
           224 : sreg <= 16'h05_00;
           225 : sreg <= 16'hFF_00;
           226 : sreg <= 16'hE0_04;
-          227 : sreg <= 16'hDA_04;//08:RGB565  04:RAW10
+          227 : sreg <= {8'hDA, mode};//08:RGB565  04:RAW10
           228 : sreg <= 16'hD7_03;
           229 : sreg <= 16'hE1_77;
           230 : sreg <= 16'hE0_00;            
