@@ -48,6 +48,7 @@ reg  [31:0] run_cnt;
 wire        running;
 
 //--------------------------
+wire        tp0_pix_clk;
 wire        tp0_vs_in  ;
 wire        tp0_hs_in  ;
 wire        tp0_de_in ;
@@ -134,11 +135,13 @@ assign  O_led[1] = ~init_calib;
 
 assign  XCLK = clk_12M;
 
+assign  tp0_pix_clk = PIXCLK;
+
 //===========================================================================
 //testpattern
 testpattern testpattern_inst
 (
-    .I_pxl_clk   (I_clk              ),//pixel clock
+    .I_pxl_clk   (tp0_pix_clk        ),//pixel clock
     .I_rst_n     (I_rst_n            ),//low active 
     .I_mode      ({1'b0,cnt_vs[7:6]} ),//data select
     .I_single_r  (8'd0               ),
@@ -162,12 +165,12 @@ testpattern testpattern_inst
     .O_data_b    (tp0_data_b         )
 );
 
-always@(posedge I_clk)
+always@(posedge tp0_pix_clk)
 begin
     vs_r<=tp0_vs_in;
 end
 
-always@(posedge I_clk or negedge I_rst_n)
+always@(posedge tp0_pix_clk or negedge I_rst_n)
 begin
     if(!I_rst_n)
         cnt_vs<=0;
@@ -216,7 +219,7 @@ assign cam_data = {PIXDATA[9:5],PIXDATA[9:4],PIXDATA[9:5]}; //RAW10
 
 //==============================================
 //data width 16bit   
-    assign ch0_vfb_clk_in  = (cnt_vs <= 10'h1ff) ? I_clk : PIXCLK;       
+    assign ch0_vfb_clk_in  = (cnt_vs <= 10'h1ff) ? tp0_pix_clk : PIXCLK;
     assign ch0_vfb_vs_in   = (cnt_vs <= 10'h1ff) ? ~tp0_vs_in : VSYNC;  //negative
     assign ch0_vfb_de_in   = (cnt_vs <= 10'h1ff) ? tp0_de_in : HREF;//hcnt;  
     assign ch0_vfb_data_in = (cnt_vs <= 10'h1ff) ? {tp0_data_r[7:3],tp0_data_g[7:2],tp0_data_b[7:3]} : cam_data; // RGB565
